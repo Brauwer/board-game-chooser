@@ -5,6 +5,7 @@ pipeline {
     stage("build") {
       
       steps {
+        echo 'Testing webhook push trigger'
         echo 'Building fantasy-football application'
       }
     }

@@ -7,26 +7,26 @@ pipeline {
   }
 
   stages {
-    stage("build") {
-      steps {
-        echo 'Building BoardGameChooser application'
-        dir('cd java/boardgamechooser/')
-        sh 'mvn clean install -DskipTests=true'
-      }
-    }
-
-    stage("Unit tests") {
-        steps {
-            echo 'Running unit tests on BoardGameChooser'
-            dir('cd java/boardgamechooser/')
-            sh 'mvn test'
+    dir('cd java/boardgamechooser/'){
+        stage("build") {
+            steps {
+                echo 'Building BoardGameChooser application'
+                sh 'mvn clean install -DskipTests=true'
+            }
         }
-    }
 
-    stage("deploy") {
-      steps {
-        echo 'Deploying BoardGameChooser'
-      }
+        stage("Unit tests") {
+            steps {
+                echo 'Running unit tests on BoardGameChooser'
+                sh 'mvn test'
+            }
+        }
+
+        stage("deploy") {
+            steps {
+            echo 'Deploying BoardGameChooser'
+            }
+        }
     }
   }
 }

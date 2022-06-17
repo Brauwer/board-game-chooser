@@ -1,26 +1,29 @@
 pipeline {
   agent any
-  
+
+  tools {
+    maven 'Maven 3.8.6'
+    jdk 'JDK18'
+  }
+
   stages {
     stage("build") {
-      
       steps {
-        echo 'Testing webhook push trigger'
-        echo 'Building fantasy-football application'
+        echo 'Building BoardGameChooser application'
+        sh 'mvn clean install -DskipTests=true'
       }
     }
-    
-        stage("test") {
-      
-      steps {
-                echo 'Testing fantasy-football application'
-      }
+
+    stage("Unit tests") {
+        steps {
+            echo 'Running unit tests on BoardGameChooser'
+            sh 'mvn test'
+        }
     }
-    
-        stage("deploy") {
-      
+
+    stage("deploy") {
       steps {
-                echo 'Deploying fantasy-football application'
+        echo 'Deploying BoardGameChooser'
       }
     }
   }

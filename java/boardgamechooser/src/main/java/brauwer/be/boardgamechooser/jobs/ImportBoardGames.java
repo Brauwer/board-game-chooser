@@ -1,4 +1,4 @@
-package brauwer.be.boardgamechooser;
+package brauwer.be.boardgamechooser.jobs;
 
 import brauwer.be.boardgamechooser.json.BoardGames;
 import brauwer.be.boardgamechooser.json.Games;

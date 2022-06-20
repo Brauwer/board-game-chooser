@@ -14,8 +14,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class ImportCategories {
 
@@ -24,7 +26,7 @@ public class ImportCategories {
 
     static {
         try {
-            clientId = Files.readString(Path.of("src/main/resources/static/clientId"));
+            clientId = Files.readString(Path.of("C:\\development\\Java\\Git\\board-game-chooser\\java\\boardgamechooser\\src\\main\\resources\\clientId"));
         } catch (IOException e) {
             logger.error("Unable to fetch API token", e);
             System.exit(0);

@@ -37,12 +37,13 @@ public class BoardGameChooserApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) {
-		ImportCategories importCategories = new ImportCategories();
-		importCategories.importCategories(categoryRepository);
-		ImportMechanics importMechanics = new ImportMechanics();
-		importMechanics.importMechanics(mechanicsRepository);
-		ImportBoardGames importBoardGames = new ImportBoardGames();
-		importBoardGames.importBoardGames(boardGameRepository);
-		logger.info("Import of boardgames finished");
+//		ImportCategories importCategories = new ImportCategories();
+//		importCategories.importCategories(categoryRepository);
+//		ImportMechanics importMechanics = new ImportMechanics();
+//		importMechanics.importMechanics(mechanicsRepository);
+//		ImportBoardGames importBoardGames = new ImportBoardGames();
+//		importBoardGames.importBoardGames(boardGameRepository);
+//		logger.info("Import of boardgames finished");
+		logger.info("Application started");
 	}
 }

@@ -1,4 +1,4 @@
-package brauwer.be.boardgamechooser;
+package brauwer.be.boardgamechooser.jobs;
 
 import brauwer.be.boardgamechooser.json.BoardGames;
 import brauwer.be.boardgamechooser.json.Games;
@@ -24,7 +24,7 @@ public class ImportBoardGames {
 
     static {
         try {
-            clientId = Files.readString(Path.of("src/main/resources/static/clientId"));
+            clientId = Files.readString(Path.of("C:\\development\\Java\\Git\\board-game-chooser\\java\\boardgamechooser\\src\\main\\resources\\clientId"));
         } catch (IOException e) {
             logger.error("Unable to fetch API token", e);
             System.exit(0);

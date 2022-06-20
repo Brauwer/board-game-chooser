@@ -1,6 +1,11 @@
 package brauwer.be.boardgamechooser;
 
+import brauwer.be.boardgamechooser.jobs.ImportBoardGames;
+import brauwer.be.boardgamechooser.jobs.ImportCategories;
+import brauwer.be.boardgamechooser.jobs.ImportMechanics;
 import brauwer.be.boardgamechooser.repo.BoardGameRepository;
+import brauwer.be.boardgamechooser.repo.CategoryRepository;
+import brauwer.be.boardgamechooser.repo.MechanicsRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,10 +18,16 @@ public class BoardGameChooserApplication implements CommandLineRunner {
 
 	private static final Logger logger = LoggerFactory.getLogger(BoardGameChooserApplication.class);
 	private final BoardGameRepository boardGameRepository;
+	private final CategoryRepository categoryRepository;
+	private final MechanicsRepository mechanicsRepository;
 
 	@Autowired
-	public BoardGameChooserApplication(BoardGameRepository boardGameRepository){
+	public BoardGameChooserApplication(BoardGameRepository boardGameRepository,
+									   CategoryRepository categoryRepository,
+									   MechanicsRepository mechanicsRepository){
 		this.boardGameRepository = boardGameRepository;
+		this.categoryRepository = categoryRepository;
+		this.mechanicsRepository = mechanicsRepository;
 	}
 
 
@@ -26,8 +37,13 @@ public class BoardGameChooserApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) {
-		ImportBoardGames importBoardGames = new ImportBoardGames();
-		importBoardGames.importBoardGames(boardGameRepository);
-		logger.info("Import of boardgames finished");
+//		ImportCategories importCategories = new ImportCategories();
+//		importCategories.importCategories(categoryRepository);
+//		ImportMechanics importMechanics = new ImportMechanics();
+//		importMechanics.importMechanics(mechanicsRepository);
+//		ImportBoardGames importBoardGames = new ImportBoardGames();
+//		importBoardGames.importBoardGames(boardGameRepository);
+//		logger.info("Import of boardgames finished");
+		logger.info("Application started");
 	}
 }

@@ -8,10 +8,12 @@ pipeline {
 
   stages {
         stage("build") {
+            dir("java/boardgamechooser"){
             steps {
                 echo 'Building BoardGameChooser application'
                 sh 'mvn clean install -DskipTests=true'
             }
+          }
         }
 
         stage("Unit tests") {

@@ -3,6 +3,7 @@ package brauwer.be.boardgamechooser.rest;
 import brauwer.be.boardgamechooser.models.Mechanics;
 import brauwer.be.boardgamechooser.repo.MechanicsRepository;
 import lombok.AllArgsConstructor;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,6 +13,7 @@ import java.util.Optional;
 
 @RestController
 @AllArgsConstructor
+@CrossOrigin(origins = "http://localhost:4200")
 public class MechanicsController {
 
     private final MechanicsRepository mechanicsRepository;

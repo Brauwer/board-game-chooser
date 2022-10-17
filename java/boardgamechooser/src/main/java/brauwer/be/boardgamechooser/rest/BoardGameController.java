@@ -1,6 +1,7 @@
 package brauwer.be.boardgamechooser.rest;
 
 import brauwer.be.boardgamechooser.models.BoardGame;
+import brauwer.be.boardgamechooser.models.Category;
 import brauwer.be.boardgamechooser.repo.BoardGameRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -28,8 +29,13 @@ public class BoardGameController {
         return repository.findById(id);
     }
 
-    @GetMapping("/boargames/{category}")
+    @GetMapping("/boardgames/category/{category}")
     List<BoardGame> findBoardGamesByCategory(@PathVariable String category){
         return repository.findByCategories(category);
+    }
+
+    @GetMapping("/boardgames/search/{name}")
+    public List<Category> findCategoryByName(@PathVariable String name){
+        return repository.findByName(name);
     }
 }

@@ -11,3 +11,4 @@ npm
 java/
 lib/
 angular/
+/src/main/resources/application.properties

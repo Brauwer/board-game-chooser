@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card bg-dark my-5">
+        <div class="card-body">
+          <h2 class="card-title text-center text-white py-3">{{ title }}</h2>
+          <ul class="text-center list-inline py-3">
+            <li class="list-inline-item">
+              <a routerLink="/boardgames" class="btn btn-info">All board games</a>
+            </li>
+            <li class="list-inline-item">
+              <a routerLink="/myBoardgames" class="btn btn-info">My board games</a>
+            </li>
+            <li class="list-inline-item">
+              <a routerLink="/playNext" class="btn btn-info">Find my next board game</a>
+            </li>
+            <li class="list-inline-item">
+              <a routerLink="/addUser" class="btn btn-info">Create account</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

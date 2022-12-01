@@ -1,0 +1,14 @@
+node_modules/
+node/
+mvnw
+mvnw.cmd
+boardgamechooser.iml
+target/
+ng
+npm
+.angular/
+.idea/
+java/
+lib/
+angular/
+/src/main/resources/application.properties

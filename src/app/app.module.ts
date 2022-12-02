@@ -9,12 +9,14 @@ import { BoardgameListComponent } from './boardgame-list/boardgame-list.componen
 import { AppRoutingModule } from './app-routing.module';
 
 import { BoardgameService } from './service/boardgame-service.service';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
-    BoardgameListComponent
+    BoardgameListComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

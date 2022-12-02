@@ -1,5 +1,6 @@
-package brauwer.be.boardgamechooser.repo;
+package brauwer.be.boardgamechooser.repo.impl;
 
+import brauwer.be.boardgamechooser.repo.MechanicsRepoCustom;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 

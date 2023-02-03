@@ -12,6 +12,8 @@ pipeline {
             steps {
                 dir("java/boardgamechooser") {
                     echo 'Building BoardGameChooser application'
+                    sh 'pwd'
+                    sh 'ls'
                     sh 'mvn clean install -DskipTests=true'
                 }
             }

@@ -8,6 +8,7 @@ ng
 npm
 .angular/
 .idea/
+.vscode/
 lib/
 /src/main/resources/application.properties
 .vscode

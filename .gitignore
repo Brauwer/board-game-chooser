@@ -10,3 +10,4 @@ npm
 .idea/
 lib/
 /src/main/resources/application.properties
+.vscode

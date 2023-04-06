@@ -1,11 +1,9 @@
 package brauwer.be.boardgamechooser;
 
-import brauwer.be.boardgamechooser.jobs.ImportBoardGames;
-import brauwer.be.boardgamechooser.jobs.ImportCategories;
-import brauwer.be.boardgamechooser.jobs.ImportMechanics;
 import brauwer.be.boardgamechooser.repo.BoardGameRepository;
 import brauwer.be.boardgamechooser.repo.CategoryRepository;
 import brauwer.be.boardgamechooser.repo.MechanicsRepository;
+import brauwer.be.boardgamechooser.repo.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,14 +18,17 @@ public class BoardGameChooserApplication implements CommandLineRunner {
 	private final BoardGameRepository boardGameRepository;
 	private final CategoryRepository categoryRepository;
 	private final MechanicsRepository mechanicsRepository;
+  private final UserRepository userRepository;
 
 	@Autowired
 	public BoardGameChooserApplication(BoardGameRepository boardGameRepository,
-									   CategoryRepository categoryRepository,
-									   MechanicsRepository mechanicsRepository){
+                                     CategoryRepository categoryRepository,
+                                     MechanicsRepository mechanicsRepository,
+                                     UserRepository userRepository){
 		this.boardGameRepository = boardGameRepository;
 		this.categoryRepository = categoryRepository;
 		this.mechanicsRepository = mechanicsRepository;
+    this.userRepository = userRepository;
 	}
 
 

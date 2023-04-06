@@ -12,3 +12,4 @@ npm
 lib/
 /src/main/resources/application.properties
 .vscode
+docker-compose.yaml
